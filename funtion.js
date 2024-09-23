@@ -16,25 +16,24 @@ function elementValue(id) {
 }
 
 function donation(btn, inputTk, defaultTk) {
-  document
-    .getElementById(btn)
-    .addEventListener("click", function (event) {
-      event.preventDefault();
-      const inputAmount = elementValue(inputTk);
-      const Amount = elementText(defaultTk);
-      if (!isNaN(inputAmount) && inputAmount > 0) {
-        const newAmount = Amount + inputAmount;
-        const balance = elementText("mainBalance");
-        if (balance > inputAmount) {
-          document.getElementById(defaultTk).innerText = newAmount;
-          document.getElementById(inputTk).value = " ";
-          const newBalance = balance - newAmount;
-          document.getElementById("mainBalance").innerText = newBalance;
-        } else {
-          alert("Not enough balance");
-        }
+  document.getElementById(btn).addEventListener("click", function (event) {
+    event.preventDefault();
+    const inputAmount = elementValue(inputTk);
+    const Amount = elementText(defaultTk);
+    if (!isNaN(inputAmount) && inputAmount > 0) {
+      const newAmount = Amount + inputAmount;
+      const balance = elementText("mainBalance");
+      if (balance > inputAmount) {
+        document.getElementById(defaultTk).innerText = newAmount;
+        document.getElementById(inputTk).value = " ";
+        const newBalance = balance - newAmount;
+        document.getElementById("mainBalance").innerText = newBalance;
+        document.getElementById("my_modal").showModal();
       } else {
-        alert("Invalid Amount");
+        alert("Not enough balance");
       }
-    });
+    } else {
+      alert("Invalid Amount");
+    }
+  });
 }
