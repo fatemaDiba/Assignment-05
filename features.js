@@ -6,19 +6,7 @@ document.getElementById("donation-btn").addEventListener("click", function () {
   window.location.href = "index.html";
 });
 
-document
-  .getElementById("donateNow-btn")
-  .addEventListener("click", function (event) {
-    event.preventDefault;
-    const inputAmount = elementFloat("input-tk");
-    const Amount = elementFloat("defaultAmount");
-    if (!isNaN(inputAmount) && inputAmount > 0) {
-      const newAmount = Amount + inputAmount;
-      document.getElementById("defaultAmount").innerText = newAmount;
-    } else {
-      alert("Invalid amount");
-    }
-  });
 
-let a = elementFloat("defaultAmount");
-console.log(a);
+donation("donateNow-btn", "input-tk", "defaultAmount");
+donation("donateNow-btn2", "input-tk2", "defaultAmount2");
+donation("donateNow-btn3", "input-tk3", "defaultAmount3");
