@@ -19,32 +19,74 @@
     </style>
 </head>
 
-<body>
-    <main>
-        <div class="collapse collapse-arrow bg-base-200">
+<body class="font-lexend">
+    <header>
+        <div class="bg-[#F9F7F3] py-6 mb-10">
+            <!-- nav -->
+            <nav
+                class="w-11/12 md:container xl:w-10/12 flex flex-col md:flex-row md:justify-between md:gap-0 gap-5 mx-auto items-center">
+                <div>
+                    <button id="home-btn"
+                        class="border border-white rounded-lg py-2 px-6 bg-[#B4F461] hover:bg-[#B4F461]/80 text-xl font-semibold">Home</button>
+                </div>
+                <div class="flex items-center gap-4">
+                    <img src="assets/logo.png" alt="">
+                    <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img src="assets/coin.png" alt="">
+                    <p id="mainBalance" class="text-xl text-[#111111]/70">5000</p>
+                    <span class="text-xl text-[#111111]/70">BDT</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="w-11/12 md:container xl:w-10/12 mx-auto mt-16">
+        <div class="flex items-center mb-5">
+            <h1 class="text-3xl font font-semibold">Important FAQ</h1>
+            <img src="./assets/message.png" alt="" class=" h-12 w-12 relative -top-4">
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-lg font-normal text-[#111111]"> What does this charity do?</div>
+            <div class="collapse-content">
+                <p class="text-base font-light text-[#111111]">We work directly with individuals and communities to
+                    create sustainable change and improve lives.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-6">
             <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title text-lg font-normal text-[#111111]">How much of my donation goes to the cause?
+            </div>
             <div class="collapse-content">
-                <p>hello</p>
+                <p class="text-base font-light text-[#111111]">We are committed to transparency. A significant portion
+                    of every taka goes directly to our programs,
+                    with only a small percentage allocated for administration and fundraising efforts to ensure we
+                    operate effectively.</p>
             </div>
         </div>
-        <div class="collapse collapse-arrow bg-base-200">
+        <div class="collapse collapse-arrow bg-base-200 mb-6">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title text-lg font-normal text-[#111111] ">Can I make a recurring donation?</div>
             <div class="collapse-content">
-                <p>hello</p>
+                <p class="text-base font-light text-[#111111]">Absolutely! Recurring donations allow us to plan better
+                    and make a sustained impact. You can set up
+                    monthly, quarterly, or annual donations.</p>
             </div>
         </div>
-        <div class="collapse collapse-arrow bg-base-200">
+        <div class="collapse collapse-arrow bg-base-200 mb-6">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title text-lg font-normal text-[#111111] "> Can I choose where my donation goes?</div>
             <div class="collapse-content">
-                <p>hello</p>
+                <p class="text-base font-light text-[#111111]">Yes! You can direct your donation to a specific program
+                    or allow us to allocate it where it’s needed most. This flexibility ensures that your support can
+                    address both immediate and long-term needs.</p>
             </div>
         </div>
+
     </main>
-    <script src="funtion.js"></script>
-    <script src="features.js"></script>
+    <script src="blog.js"></script>
+
 </body>
 
 </html>

@@ -1,3 +1,22 @@
+const stickyHeader = document.getElementById("header");
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 0) {
+    stickyHeader.classList.add(
+      "sticky",
+      "top-0",
+      "backdrop-blur-lg",
+      "drop-shadow-lg"
+    );
+  } else {
+    stickyHeader.classList.remove(
+      "sticky",
+      "top-0",
+      "backdrop-blur-lg",
+      "drop-shadow-lg"
+    );
+  }
+});
+
 document.getElementById("donation-btn").addEventListener("click", function () {
   document.getElementById("cardContainer").classList.add("hidden");
   document.getElementById("historyContainer").classList.add("hidden");
@@ -19,8 +38,3 @@ document.getElementById("history-btn").addEventListener("click", function () {
 donation("donateNow-btn", "input-tk", "defaultAmount");
 donation("donateNow-btn2", "input-tk2", "defaultAmount2");
 donation("donateNow-btn3", "input-tk3", "defaultAmount3");
-
-document.getElementById("blog-btn").addEventListener("click", function (event) {
-  event.preventDefault();
-  window.location.href = "blog.html";
-});
