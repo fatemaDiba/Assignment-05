@@ -29,6 +29,8 @@ function donation(btn, inputTk, defaultTk) {
         const newBalance = balance - newAmount;
         document.getElementById("mainBalance").innerText = newBalance;
         document.getElementById("my_modal").showModal();
+        let historyHeading = getHeading(defaultTk);
+        getHistory(historyHeading, inputAmount);
       } else {
         alert("Not enough balance");
       }
